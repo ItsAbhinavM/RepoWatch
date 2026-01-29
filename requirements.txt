@@ -1,0 +1,5 @@
+discord.py>=2.3.2
+aiohttp>=3.9.0
+dotenv
+# flask>=3.0.0
+# requests>=2.31.0
