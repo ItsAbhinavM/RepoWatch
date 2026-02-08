@@ -1,2 +1,4 @@
 # RepoWatch
-This is a basic discord bot which sends you a message on any opened issue/pull request in your desired repository. The bot is triggered to check every 60 seconds.
+Sample bot set to watch your repository and provide an alert every time an issue or a PR is given. The bot is triegered to check every 60 seconds.
+You can also use this to view other public repositories without the need of any GitHub API.
+For setup create a `.env` similar to the `.env.sample` given.
