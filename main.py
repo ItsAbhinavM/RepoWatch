@@ -94,7 +94,7 @@ async def fetch_github_data(session, url):
 def create_pr_embed(pr):
     """Create a Discord embed for pull request"""
     embed = discord.Embed(
-        title=f"🔀 New Pull Request: {pr['title']}",
+        title=f"New Pull Request: {pr['title']} -  by {pr['user']['login']}",
         url=pr['html_url'],
         description=(pr['body'][:500] if pr.get('body') else "No description provided") + ("..." if pr.get('body') and len(pr['body']) > 500 else ""),
         color=discord.Color.green(),
@@ -119,7 +119,7 @@ def create_pr_embed(pr):
 def create_issue_embed(issue):
     """Create a Discord embed for issue"""
     embed = discord.Embed(
-        title=f"🐛 New Issue: {issue['title']}",
+        title=f"New Issue: {issue['title']}",
         url=issue['html_url'],
         description=(issue['body'][:500] if issue.get('body') else "No description provided") + ("..." if issue.get('body') and len(issue['body']) > 500 else ""),
         color=discord.Color.red(),
